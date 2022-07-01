@@ -8,7 +8,16 @@
 import Foundation
 import Combine
 
+public enum LoadingState {
+    case idle
+    case loading
+    case failed(Decodable)
+    case loaded(Decodable)
+}
+
 open class BaseViewModel: ObservableObject {
+    @Published open var loadingState: LoadingState = .idle
+    @Published open var error: Swift.Error?
 
     required public init() {
         // Intentionally unimplemented
