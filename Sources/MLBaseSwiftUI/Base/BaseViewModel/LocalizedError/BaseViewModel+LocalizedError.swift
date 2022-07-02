@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-public extension BaseViewModel {
+public extension BaseVM {
     enum LocalError: LocalizedError {
         case networkError
 

@@ -15,7 +15,7 @@ public enum LoadingState {
     case loaded(Decodable)
 }
 
-open class BaseViewModel: ObservableObject {
+open class BaseVM: ObservableObject {
     @Published open var loadingState: LoadingState = .idle
     @Published open var error: Swift.Error?
 

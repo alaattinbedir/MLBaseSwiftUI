@@ -10,7 +10,7 @@ import UIKit
 import SwiftUI
 
 public struct BaseView<Content: View>: View {
-    @StateObject public var vm = BaseViewModel()
+    @StateObject public var vm = BaseVM()
 
     public var content: Content
 
