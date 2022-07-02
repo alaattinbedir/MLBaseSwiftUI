@@ -11,7 +11,7 @@ import Combine
 public enum LoadingState {
     case idle
     case loading
-    case failed(Decodable)
+    case failed(ErrorInfo)
     case loaded(Decodable)
 }
 

@@ -18,14 +18,8 @@ public struct AlertView: View {
     }
 
     public var body: some View {
-
-        BaseAlertView(isAlertPresented: $showAlert, errorInfo: $errorInfo) {
-            Text("")
-        }
-//        .onReceive(vm.publisher) { (output) in
-        .onAppear {     // used instead of above just for test
-
-//            self.showAlert = true
+        BaseView(isAlertPresented: $showAlert, errorInfo: $errorInfo) {
+            empty()
         }
     }
 }
