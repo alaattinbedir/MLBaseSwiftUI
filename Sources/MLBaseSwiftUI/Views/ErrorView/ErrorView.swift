@@ -8,7 +8,6 @@
 import SwiftUI
 
 public struct ErrorView: View {
-
     public typealias ErrorViewActionHandler = () -> Void
 
     public let error: ErrorInfo
@@ -46,14 +45,12 @@ public struct ErrorView: View {
             .foregroundColor(.white)
             .font(.system(size: 15, weight: .heavy))
             .cornerRadius(10)
-
-        }
+        }.padding(20).foregroundColor(.black).background(.white).addBorder(Color.black, width: 1, cornerRadius: 10)
     }
 }
 
 struct ErrorView_Previews: PreviewProvider {
     static var previews: some View {
         ErrorView(error: ErrorInfo(id: 1003, title: "Warning", message: "Failed to decode the object from the service")){}
-            .previewLayout(.sizeThatFits)
     }
 }
