@@ -15,7 +15,7 @@ public extension View {
     func bgView(opacity: Double = 0.5) -> some View {
         ZStack {
             Color.black.opacity(opacity)
-        }
+        }.ignoresSafeArea(.all)
     }
 
     func addBorder<S>(_ content: S, width: CGFloat = 1, cornerRadius: CGFloat) -> some View where S : ShapeStyle {
